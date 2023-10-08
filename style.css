@@ -1,97 +1,266 @@
-body {
-margin: 0px;
-padding: 0%;
-box-sizing: border-box;
-background: url("https://cdn.shopify.com/s/files/1/0305/4075/9177/products/papel-de-parede-adesivo-linho-cinza-n08255-970824.jpg?v=1643338111");
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Young+Serif&display=swap');
+
+body{
+  margin: 0px;
+  padding: 0%;
+  box-sizing: border-box;
+  background-color: #ffffff;
 }
 
-#tudo {
-display: flex;
-flex-direction: row;
-height: 135vh;
-width: 100%;
-overflow: hidden;
+#tudo{
+  display: flex;
+  flex-direction: row;
+  height: 135vh;
+  width: 100%;
+  overflow: hidden;
 }
 
-#side-bar {
-display: flex;
-flex-direction: column;
-border: 1px solid black;
-height: 135vh;
-width: 20vw;
-background-color: #333333;
-font-family: sans-serif;
-border: solid 2px black;
-padding:5px;
+#header{
+  position: fixed;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  top: 0; 
+  left: 0; 
+  width: 100%;
+  height:5em;
+  background-color: #ffe6f5;
 }
 
-#header {
-display: flex;
-justify-content: flex-start;
-width: 100%;
-height:5em;
-background-color: #ffe6f5;
+#header_1{
+  display: flex;
+  justify-content: flex-start;
+  width: 4em;
 }
+
+#header_3{
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Estilo para a barra lateral */
+.sidebar {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: -250px; /* Inicialmente oculta */
+  background-color: #f3bfde;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+/* Estilo para o botão */
+#open-sidebar {
+  margin-left: 6px;
+  size: 100px;
+  left: 10px;
+  top: 10px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  z-index: 1; /* Garante que o botão esteja acima da barra lateral */
+}
+
+#sidebar-content{
+  margin-left: 10em;
+}
+
+#open-sidebar img {
+  width: 4em; 
+  height: 4em;
+}
+
+#sidebar_titulo{
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 100px;
+  color: #ffffff;
+}
+
+.sidebar_marcas{
+  font-family: 'Young Serif', serif;
+  color: #ffffff;
+}
+
+#cart{
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+}
+
+#cart img{
+  width: 4em; 
+  height: 4em;
+}
+
+.titulo{
+  font-family: 'Young Serif', serif;
+  font-size: 70px;
+}
+
 
 #logo{
-    height: auto;
-    max-width: 17em;
-}
-
-#header_2 {
-display: flex;
-flex-direction: row;
-justify-content: space-between;
-width: 100%;
-height: 10vh;
-border-bottom: 1px solid black;
-background-color: #c4cfdb;
-}
-
-#pesquisa{
-
+  height: auto;
+  max-width: 17em;
 }
 
 #ad{
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
-.ad_images{
-    width: 500px;
-    height: 300px;
-    border: #333333 solid;
+.ad_main{
+  width: 2500px;
+  height: 500px;
+  margin: 8em 0em 5em 0em;
 }
 
-#produtos_id{
-    display: flex;
-    justify-content: space-evenly;
+#ad2{
+  height: 18em;
+  margin: 5em 0em 5em 0em;
+}
+
+#ad3{
+  width: 2000px;
+  height: 300px;
+}
+
+#stepping_image{
+  height: 60em;
+}
+
+#destaques{
+  background-color: #F2EADA;
+  border-radius: 2em;
+  margin: 1em 10em 5em 10em;
+  padding: 3em 0em 1em 0em;
+}
+
+#titulos{
+  display: flex;
+  justify-content: center;
+  color: #000000;
+}
+
+#produtos_destaques{
+  display: flex;
+  justify-content: space-evenly;
+  padding: 2em 0em 2em 0em;
+}
+
+#descontos{
+  background-color: #F2EADA;
+  background-image: url(./imagens_icones/discontos.png);
+  border-radius: 2em;
+  margin: 3em 10em 5em 10em;
+  padding: 4% 0em 1em 0em;
+}
+
+#produtos_discontos{
+  gap: 5em;
+  margin: 3em 10em 5em 10em;
+  padding: 2em 0em 2em 0em;
+}
+
+#produtos_discontos_div{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.disconto{
+  border: #333333 solid;
+}
+
+#stepping{
+  background-color: #F2EADA;
+  border-radius: 2em;
+  padding: 5em 6em 5em 5em;
+  margin: 3em 5em 5em 5em;
+}
+
+#produtos_stepping{
+  display: flex;
+  justify-content: center;
+  margin: 1em;
+}
+
+#produtos_stepping_div{
+  display: flex;
+  margin-top: 4em;
+}
+
+#produtos_stepping_div_2{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#marcas{
+  display: flex;
+  background-color: #ffffff;
+  justify-content: space-around;
+  margin: 5em 0em 0em 0em;
+}
+
+.marcas_buttons{
+  background-color: #ffffff;
+}
+
+.marcas_logo{
+  max-width: 6em;
+  max-height: 6em;
+  background-color: #ffffff;
+}
+
+#produtos_all{
+  background-color: #F2EADA;
+  border-radius: 2em;
+  margin: 7em 5em 5em 5em;
+  padding: 5em;
+}
+
+#produtos_all_div{
+  display: flex;
+  justify-content: space-evenly;
+  margin: 5em;
 }
 
 .produtos{
-    max-width: 35em;
-    max-width: 35em;
+  max-width: 15em;
+  max-width: 15em;
 }
 
-.side_bar_texto{
-    display: flex;
-    flex-direction: row;
-    color: #fff;
-    justify-content: flex-start;
-    align-items: center;
-    margin-left: 10px;
-    gap: 6px;
+.disconto{
+  max-width: 25em;
+  max-width: 25em;
 }
 
-label{
-    border: black solid 1px;
-    border-radius: 5px;
-    background-color: #3c8dbc;
-    color:#fff;
-    width: 12em;
-    height: 2em;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+.stepping{
+  max-width: 18em;
+  max-width: 18em;
+  border: #333333 solid;
+  margin: 1.5em;
+}
+
+#footer{
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #e9dcc1;
+}
+
+#footer_2{
+  display: flex;
+  justify-content: center;
+  background-color: #F2EADA;
+  height: 20vh;
+}
+
+#logo_end{
+  height: 20vh;
 }
